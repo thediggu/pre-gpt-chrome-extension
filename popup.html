@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expertise Picker</title>
+    <style>
+      body,
+      html {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        min-width: 400px;
+        background: #252628;
+        color: white;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      .list {
+        border: 1px solid #171819;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .list-item {
+        padding: 12px 16px;
+        cursor: pointer;
+        background: #171819;
+        border-bottom: 1px solid #252628;
+      }
+
+      .list-item:last-child {
+        border-bottom: none;
+      }
+
+      .list-item:hover {
+        background-color: #252628;
+        border-bottom: 1px solid #171819;
+      }
+
+      .list-item:last-child:hover {
+        border-bottom: none;
+      }
+
+      #addButton {
+        display: inline-block;
+        margin-top: 16px;
+        background-color: #3f51b5;
+        color: #ffffff;
+        padding: 8px 16px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 4px;
+      }
+
+      #addItemForm {
+        display: none;
+        margin-top: 16px;
+      }
+
+      #addItemForm input {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+      }
+
+      #addItemButton {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 8px 16px;
+        margin: 8px 0;
+        cursor: pointer;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="list" id="expertiseList">
+        <div
+          class="list-item"
+          data-description="Act as an experienced React developer with years of expertise.  Ask me questions to clear any confusion, if necessary. Help me with the following - "
+          data-value="React"
+        >
+          React
+        </div>
+        <div
+          class="list-item"
+          data-description="Act as an experienced Ruby on Rails developer with years of expertise.  Ask me questions to clear any confusion, if necessary. Help me with the following - "
+          data-value="Ruby on Rails"
+        >
+          Ruby on Rails
+        </div>
+        <div
+          class="list-item"
+          data-description="Act as an experienced TypeScript developer with years of expertise.  Ask me questions to clear any confusion, if necessary. Help me with the following - "
+          data-value="TypeScript"
+        >
+          TypeScript
+        </div>
+      </div>
+      <div id="addButton">+</div>
+      <div id="addItemForm">
+        <input id="newItemName" placeholder="Item Name" />
+        <input id="newItemDescription" placeholder="Item Description" />
+        <div id="addItemButton">Add</div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

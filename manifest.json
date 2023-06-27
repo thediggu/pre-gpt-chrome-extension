@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Pre-GPT",
+  "version": "1.0",
+  "description": "A Chrome extension that provides a list of prompt prefixes to start a GPT conversation. Made with AI.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://chat.openai.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["*://chat.openai.com/*"]
+}
